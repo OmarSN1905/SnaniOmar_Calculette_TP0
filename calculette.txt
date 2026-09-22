@@ -1,0 +1,67 @@
+/*
+Omar SNANI
+Groupe A
+Calculatrice
+22/09/2026
+*/
+package calculator;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author snani
+ */
+public class Calculator {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int operateur;
+        int operande1, operande2;
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Please enter the operator:\n1) add\n2) substract\n3) multiply\n4) divide\n5) modulo");
+        operateur = sc.nextInt();
+        
+        System.out.println("Donne une première valeur :");
+        operande1 = sc.nextInt();
+        System.out.println("Donne une seconde valeur :");
+        operande2 = sc.nextInt();
+        
+        
+        switch (operateur) {
+
+            case 1:
+                System.out.println("Résultat de la somme : " + (operande1 + operande2));
+                break;
+
+            case 2:
+                System.out.println("Résultat de la soustraction : " + (operande1 - operande2));
+                break;
+
+            case 3:
+                System.out.println("Résultat de la multiplication : " + (operande1 * operande2));
+                break;
+                
+            case 4:
+                System.out.println("Résultat de la division : " + (float)operande1 / operande2);
+                break;
+                
+            case 5:
+                System.out.println("Résultat du modulo : " + (operande1 % operande2));
+                break;   
+
+            default:
+                System.out.println("Erreur !");
+                break;
+        }
+        
+        
+        
+        
+        
+    }
+    
+}
